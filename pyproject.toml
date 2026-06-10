@@ -1,0 +1,45 @@
+[project]
+name = "wallop"
+version = "0.1.0"
+description = "HTTP load testing you can feel. Every request is a particle; watch your server take the hit, live in your terminal."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "wallop contributors" }]
+keywords = ["load-testing", "http", "benchmark", "tui", "terminal", "visualization", "particles"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Testing :: Traffic Generation",
+]
+dependencies = ["aiohttp>=3.9"]
+
+[project.urls]
+Homepage = "https://github.com/siam-hossain9/wallop"
+Repository = "https://github.com/siam-hossain9/wallop"
+Issues = "https://github.com/siam-hossain9/wallop/issues"
+
+[project.scripts]
+wallop = "wallop.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wallop"]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
