@@ -7,4 +7,4 @@ build/
 .pytest_cache/
 uv.lock
 .coverage
-docs/demo.gif
+docs/*.mp4

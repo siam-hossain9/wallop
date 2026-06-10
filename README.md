@@ -9,16 +9,9 @@
 
 > Think *Logstalgia meets oha*: a real load generator with real stats (RPS, p50/p95/p99, status codes), rendered as a live physics scene instead of yet another line chart.
 
-<!-- HERO DEMO: record with `vhs demo/wallop.tape` or any screen recorder.
-     Capture `wallop demo` for ~40s in a 110x30 Windows Terminal / iTerm2 window:
-     it shows the full incident arc — healthy green impacts, latency creep
-     (particles stalling mid-air), an error storm (red explosions + screen
-     shake + embers on the ground), meltdown, recovery.
-     Then uncomment the line below:
 ![wallop demo](docs/demo.gif)
--->
 
-> 🎬 **See it live in 10 seconds:** `uv tool install wallop && wallop demo`
+*One full incident, live in the terminal: healthy traffic → latency creep (particles stalling mid-air) → error storm (red explosions, embers) → meltdown → recovery.*
 
 ## Why
 
